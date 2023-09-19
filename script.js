@@ -508,8 +508,8 @@ document.querySelectorAll(".second").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
-      start: "65% bottom",
-      end: "65% top",
+      start: "80% bottom",
+      end: "80% top",
       pin: true,
       //markers: true,
       scrub: true,

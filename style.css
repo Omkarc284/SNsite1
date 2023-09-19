@@ -212,6 +212,30 @@ section{
     justify-content: flex-end;
     align-items:flex-start;
 }
+.pg2 {
+    position: fixed;
+    top: 55%;
+    left: 72%;
+    text-align: right;
+    max-width: 65%;
+}
+.pg3 {
+    position: fixed;
+    top: 36%;
+    left: 26%;
+    text-align: left;
+    max-width: 30%;
+}
+h2 {
+    color: white;
+    text-align: right;
+    font-weight: 300;
+    font-size: 4vw;
+}
+h2>span{
+    color: white;
+    font-weight: bold;
+}
 @keyframes fadeOut {
     from {
       opacity: 1;
