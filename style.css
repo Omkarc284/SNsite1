@@ -236,6 +236,9 @@ h2>span{
     color: white;
     font-weight: bold;
 }
+p{
+    font-size: 1vw;
+}
 @keyframes fadeOut {
     from {
       opacity: 1;
