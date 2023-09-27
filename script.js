@@ -529,7 +529,7 @@ document.querySelectorAll(".third").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
-      start: "65% bottom",
+      start: "75% bottom",
       end: "65% top",
       pin: true,
       //markers: true,
@@ -550,8 +550,8 @@ document.querySelectorAll(".fourth").forEach((section) => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
-      start: "55% bottom",
-      end: "55% top",
+      start: "75% bottom",
+      end: "65% top",
       pin: true,
       //markers: true,
       scrub: true,
