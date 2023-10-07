@@ -9,11 +9,11 @@ html, body{
     height: 100%;
     width: 100%;
     background-color: black;
-    /* scroll-snap-type: y mandatory;
-    scroll-behavior: smooth; */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 #main{
-    position: relative;
+    position: absolute;
     overflow: hidden;
 }
 li {
@@ -39,7 +39,7 @@ nav{
     flex: 1;
     align-items: center;
     justify-content: space-between;
-    z-index: 2;
+    z-index: 200;
     position: fixed;
     top: 2%;
     left: 50%;
@@ -298,6 +298,7 @@ p{
     text-align: right;
 }
 .aboutus{
+    position: relative;
     padding-top: 108px;
     display: flex;
     flex-direction: column;
@@ -314,7 +315,7 @@ p{
   }
 .loader {
     position: fixed;
-    z-index: 200;
+    z-index: 400;
     background-color: #000000;
     top: 0;
     left: 0;
@@ -341,6 +342,8 @@ p{
     height: 300px;
     width: 100vw;
     max-width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid-container {
@@ -401,4 +404,47 @@ p{
 }
 .outer-content>p {
     margin-bottom: 12px;
+}
+.layout{
+    display: flex;
+    flex: 1;
+    max-width: 75%;
+    align-items: center;
+    justify-content: space-between;
+}
+.cells{
+    display: flex;
+    flex-direction: column;
+}
+.cells p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 24px;
+}
+.cell2{
+    transform: translateY(-20px);
+    display:flex;
+    align-items:center;
+}
+.cell3 {
+    text-align: right;
+}
+.socials{
+    display: flex;
+    padding : 4px;
+}
+.social {
+    padding: 4px
+}
+
+.studios{
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.now{
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1px;
 }
