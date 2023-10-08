@@ -34,7 +34,36 @@
             <span class="bar"></span>
         </div>
     </nav>
+    <div id="airpods" class="modal">
 
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+          <iframe width="1500" height="788" src="https://www.youtube.com/embed/QAcxbCoqIhk?si=mW_6WBbYS2FCnlW1?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          
+        </div>
+      
+    </div>
+    <div id="clothin" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe width="1500" height="788" src="https://www.youtube.com/embed/G24ez1Ky3pM?si=ztre-Md9I4HRncZ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          
+        </div>
+      
+    </div>
+    <div id="others" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+          <iframe width="1500" height="788" src="https://www.youtube.com/embed/QAcxbCoqIhk?si=mW_6WBbYS2FCnlW1?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          
+        </div>
+      
+    </div>
     <!-- <div id="nav">
         <div id="logo">
             <a href="#">
@@ -67,7 +96,7 @@
                 </div>
                 
                 
-                <div class="clickable1">
+                <div class="clickable1" id="clickable1">
     
                     <img src="./imgs/airpods_play.png" alt="airpods"/>
                 </div>
@@ -84,7 +113,7 @@
                     <h2><span>CLOTHING</span></h2>
                 </div>
                 
-                <div class="clickable2">
+                <div class="clickable2" id="clickable2">
     
                     <img src="./imgs/clothing_play.png" alt="clothing"/>
                 </div>
@@ -100,7 +129,7 @@
                 <div class="head">
                     <h2>... And <span>Everything</span></h2>
                 </div>
-                <div class="clickable1">
+                <div class="clickable1" id="clickable3">
     
                     <img src="./imgs/others_play.png" alt="others"/>
                 </div>
@@ -155,6 +184,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="footer">
             <div class="layout">
                 <div class="cell1 cells">
@@ -195,21 +225,78 @@
     <!--JavaScript at end of body for optimized loading-->
     <script src="script.js"></script>
     <script>
-        $(document).scroll(function(){
+            var modal1 = document.getElementById("airpods");
+            var modal2 = document.getElementById("clothin");
+            var modal3 = document.getElementById("airpods");
+            // Get the button that opens the modal
+            var btn1 = document.getElementById("clickable1");
+            var btn2 = document.getElementById("clickable2");
+            var btn3 = document.getElementById("clickable3");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
 
-            var scroll_pos = $(window).scrollTop()
+            // When the user clicks the button, open the modal 
+            btn1.onclick = function() {
+            modal1.style.display = "flex";
+            }
+            btn2.onclick = function() {
+            modal2.style.display = "flex";
+            }
+            btn3.onclick = function() {
+            modal3.style.display = "flex";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal1.style.display = "none";
+            modal2.style.display = "none";
+            modal3.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal1) {
+                    modal1.style.display = "none";
+                }
+                if (event.target == modal2) {
+                    modal2.style.display = "none";
+                }
+                if (event.target == modal3) {
+                    modal3.style.display = "none";
+                }
+            }
             
+            $(document).ready(function(){
+                $('#airpods').each(function(){
+                        var src = $(this).find('iframe').attr('src');
 
+                    $(this).on('click', function(){
+
+                        $(this).find('iframe').attr('src', '');
+                        $(this).find('iframe').attr('src', src);
+
+                    });
+                });
+                $('#clothin').each(function(){
+                        var src = $(this).find('iframe').attr('src');
+
+                    $(this).on('click', function(){
+
+                        $(this).find('iframe').attr('src', '');
+                        $(this).find('iframe').attr('src', src);
+
+                    });
+                });
+                $('#others').each(function(){
+                        var src = $(this).find('iframe').attr('src');
+
+                    $(this).on('click', function(){
+
+                        $(this).find('iframe').attr('src', '');
+                        $(this).find('iframe').attr('src', src);
+
+                    });
+                });
+            });
             
-
-            $("#top").on("click", function() {
-            $("body").scrollTop(0);
-        
-
-
-            });
-            });
-        
     </script>
 </body>
 </html>

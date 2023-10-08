@@ -391,6 +391,40 @@ p{
     justify-content: center;
     
 }
+.modal {
+    display: none; /* Hidden by default */
+    flex: 1;
+    position: fixed; /* Stay in place */
+    z-index: 500; /* Sit on top */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    align-items: center;
+    justify-content: center;
+ /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.801); /* Black w/ opacity */
+}
+/* Modal Content */
+.modal-content {
+    background-color: #000000;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    z-index: 505;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 .box-content{
     color:#000000
 }
