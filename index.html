@@ -38,7 +38,7 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close1">&times;</span>
           <iframe width="1500" height="788" src="https://www.youtube.com/embed/QAcxbCoqIhk?si=mW_6WBbYS2FCnlW1?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           
         </div>
@@ -48,7 +48,7 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close2">&times;</span>
             <iframe width="1500" height="788" src="https://www.youtube.com/embed/G24ez1Ky3pM?si=ztre-Md9I4HRncZ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           
         </div>
@@ -58,7 +58,7 @@
 
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span class="close3">&times;</span>
           <iframe width="1500" height="788" src="https://www.youtube.com/embed/QAcxbCoqIhk?si=mW_6WBbYS2FCnlW1?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           
         </div>
@@ -227,14 +227,15 @@
     <script>
             var modal1 = document.getElementById("airpods");
             var modal2 = document.getElementById("clothin");
-            var modal3 = document.getElementById("airpods");
+            var modal3 = document.getElementById("others");
             // Get the button that opens the modal
             var btn1 = document.getElementById("clickable1");
             var btn2 = document.getElementById("clickable2");
             var btn3 = document.getElementById("clickable3");
             // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
+            var span1 = document.getElementsByClassName("close1")[0];
+            var span2 = document.getElementsByClassName("close2")[0];
+            var span3 = document.getElementsByClassName("close3")[0];
             // When the user clicks the button, open the modal 
             btn1.onclick = function() {
             modal1.style.display = "flex";
@@ -246,10 +247,17 @@
             modal3.style.display = "flex";
             }
             // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-            modal1.style.display = "none";
-            modal2.style.display = "none";
-            modal3.style.display = "none";
+            span1.onclick = function() {
+                modal1.style.display = "none";
+            }
+            span2.onclick = function() {
+           
+                modal2.style.display = "none";
+            
+            }
+            span3.onclick = function() {
+           
+                modal3.style.display = "none";
             }
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {

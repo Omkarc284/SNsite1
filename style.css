@@ -411,7 +411,7 @@ p{
   }
   
   /* The Close Button */
-  .close {
+  .close1, .close2, .close3 {
     z-index: 505;
     color: #aaaaaa;
     float: right;
@@ -419,8 +419,12 @@ p{
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .close1:hover,
+  .close1:focus,
+  .close2:hover,
+  .close2:focus,
+  .close3:hover,
+  .close3:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
