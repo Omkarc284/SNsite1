@@ -9,9 +9,7 @@ html, body{
     height: 100%;
     width: 100%;
     background-color: black;
-    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    scrollbar-color: rgb(199, 197, 197);
 }
 #main{
     position: absolute;
@@ -22,22 +20,23 @@ li {
 }
 .scrollerClass {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 11px;
-    height: 100vh;
+    right: 2%;
+    top: 7%;
+    width: 1px;
+    height: 85vh;
     transform-origin: center right;
-    background-color: #7776767a;
+    background-color: rgb(255, 255, 255);
     opacity: 1;
 }
 .scrollerClass_thumb {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -8px;
     background-color: rgb(255, 255, 255);
-    opacity: 0.5;
-    width: 7px;
-    border-radius: 10px;
+    opacity: 1;
+    width: 12px;
+    height: 15px;
+    border-radius: 15px;
     margin: 2px;
     cursor: -webkit-grab;
     cursor: grab;
@@ -114,7 +113,10 @@ nav{
     text-transform: uppercase;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
+    .scrollerClass {
+        display:none
+    }
     nav {
         position: fixed;
         width: 100vw;
@@ -321,7 +323,7 @@ p{
 }
 .aboutus{
     position: relative;
-    padding-top: 108px;
+    padding-top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,8 +341,7 @@ p{
     position: fixed;
     z-index: 400;
     background-color: #000000;
-    top: 0;
-    left: 0;
+    background-image: none;
     width: 100%;
     height: 100%;
     display: flex;
@@ -356,8 +357,6 @@ p{
 .loader .logo {
     max-width: 1024px;
     max-height: 576px;
-    width: 100%;
-    height: 100%;
 }
 .footer{
     background-color: #C8C4C4;
@@ -430,8 +429,12 @@ p{
 .modal-content {
     background-color: #000000;
     width: 80%;
+    height: 80%;
   }
-  
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
   /* The Close Button */
   .close1, .close2, .close3 {
     z-index: 505;

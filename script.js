@@ -411,7 +411,7 @@ function files(index) {
   return data.split("\n")[index];
 }
 
-const frameCount = 303;
+const frameCount = 285;
 
 const images = [];
 const imageSeq = {
