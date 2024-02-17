@@ -3,7 +3,7 @@
     margin:0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', "Outfit";
 }
 html, body{
     height: 100%;
@@ -125,32 +125,56 @@ nav{
 }
 
 .contactlinkcontainer{
-    background-color: #ffffff;
-    border-radius: 18px;
+    
     justify-content: center;
     align-items: center;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
+    
+    .contactlink{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color: #ffffff;
+        border-radius: 18px;
+    }
     .chat{
-        display: none;
+        opacity: 0;
+        padding-top: 1px;
     }
 }
 .contactlinkcontainer:hover{
     display:flex;
     flex-direction: row;
-    background-color: transparent;
     justify-content: center;
     align-items: center;
+    transition: opacity;
+    transform: translateX(9px);
+    transition-timing-function: ease-out;
+    transition-duration: 100ms;
+
+    -ms-transition:opacity;
+    -ms-transform: translateX(9px);
+    -ms-transition-timing-function: ease-out;
+    -ms-transition-duration: 100ms;
+
+    -moz-transition:opacity;
+    -moz-transform: translateX(9px);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 100ms;
+
+    -webkit-transition: opacity;
+    -webkit-transform: translateX(9px);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 100ms;
     .contactlink{
+        background-color: transparent;
         color:#ffffff;
-        font-size: 16px;
     };
+    
     .chat{
-        display: flex;
-        padding-left: 2px;
+        opacity:1;
         padding-top: 1px;
+        transition: all 0.4s ease-in;
     }
     
 }
@@ -226,22 +250,27 @@ p{
 }
 h1{
     color: white;
-    text-align: right;
+    text-align: center;
+    font-family: "Outfit";
     font-weight: 100;
-    font-size: 5vw;
-    letter-spacing: 8px;
+    font-size: 64px;
+    line-height: 80.64px;
+    letter-spacing: 13%;
+    text-transform: uppercase;
 }
 
 h1>span{
     color: white;
-    font-weight: bold;
-    letter-spacing: -5px;
+    font-weight: 900;
 }
 h4{
     color: white;
-    font-weight: 300;
-    font-size: 2.5vw;
-    text-align:right;
+    padding-top: 24px;
+    font-weight: 600;
+    font-size: 24px;
+    text-align:center;
+    line-height: 30.24px;
+    letter-spacing: 13%;
 }
 
 section{
@@ -252,137 +281,176 @@ section{
     left: 50%;
     transform: translateX(-50%);
     height: 100vh;
-    width: 100vw;
-    max-width: 74%;
+    width: 60%;
     background-color: transparent;
 }
-
+.filler{
+    height: 60vh;
+}
 .clickable1{
-    display: flex;
-    flex-shrink: 1;
-    cursor: pointer;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-content: right;
+    border-radius: 28px;
+    padding: 20px;
+    cursor: pointer; 
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-image: url('./imgs/airpods.png');
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 173px;
+    height:  198px;
 }
-.clickable1 img{
-    width: 18vw;
-    height:  auto;
+.clickable1:hover{
+    width: 216px;
+    border-radius: 28px;
+    background-image: url('./imgs/airpodspro.gif');
 }
+
 .clickable2{
-    display: flex;
-    flex-shrink: 1;
-    cursor: pointer;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-content: left;
+    border-radius: 25px;
+    padding: 20px;
+    cursor: pointer; 
+    
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-image: url('./imgs/clothing.png');
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    width: 173px;
+    height:  198px;
+    
 }
-.clickable2 img{
-    width: 18vw;
-    height:  auto;
+.clickable2:hover{
+    width: 216px;
+    border-radius: 28px;
+    background-image: url('./imgs/clothinggif.gif');
 }
-img:hover{
-    opacity: 0.9;
+.clickable3{
+    border-radius: 28px;
+    padding: 20px;
+    cursor: pointer; 
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-image: url('./imgs/car.png');
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    width: 173px;
+    height:  198px;
 }
+.clickable3:hover{
+    width: 198px;
+    height: 198px;
+    border-radius: 28px;
+    background-image: url('./imgs/cargif.gif');
+}
+
 .page1{
-    right: 12.5%;
-    justify-content: flex-end;
+    justify-content:right;
     align-items: center;
+    padding-top: 5%;
+}
+.content1>p {
+    padding-top: 18px;
+    font-family: 'Outfit';
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 18.9px;
+    letter-spacing: 20%;
+    text-transform: uppercase;
 }
 .page2{
-    display: flex;
-    max-width: 74%;
     justify-content: right;
     align-items:flex-start;
+    padding-top: 5%;
 }
 .content2{
     display: flex;
-    height: 64%;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+}
+.content2 p{
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    width: 312px;
 }
 .page3{
-    display: flex;
-    max-width: 74%;
-    justify-content: right;
+    justify-content: left;
     align-items:flex-start;
+    padding-top: 5%;
 }
 .content3{
     display: flex;
-    height: 60%;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
 }
+.content3>p{
+    text-align: center;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    width: 312px;
+}
+
 .page4{
-    display: flex;
-    max-width: 74%;
+    padding-top: 5%;
     justify-content: right;
     align-items:flex-start;
-}
-.pg2 {
-    display: flex;
-    justify-content: right;
-}
-.pg2 p {
-    text-align: right;
-    max-width: 50%;
-}
-.pg3 {
-    display: flex;
-    justify-content: left;
-}
-.pg3 p {
-    text-align: left;
-    max-width: 50%;
-}
-.pg4 {
-    display: flex;
-    /* flex-direction: row;
-    align-items: center; */
-    justify-content: right;
-}
-.pg4 p {
-    text-align: right;
-    max-width: 50%;
-}
-h3{
-    font-size: 7vw;
-    color: white;
-    font-weight: 100;
-    letter-spacing: -10px;
-    margin-right: 20px;
-}
-h3>span{
-    font-weight: bold;
 }
 
 h2 {
     color: white;
-    text-align: right;
-    font-weight: 100;
-    font-size: 5vw;
+    text-align: center;
+    font-family: 'Outfit';
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 80.64px;
+    letter-spacing: 64%;
+    text-transform: uppercase;
 }
-h2>span{
-    color: white;
-    font-weight: bold;
-    letter-spacing: -5px;
-}
-p{
-    font-size: 1vw;
-}
-.tags {
-    font-size: 1.8vw;
-    text-align: right;
-}
+
 .aboutus{
     position: relative;
     padding: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+}
+.aboutcontent>h3{
+    color: #ffffff;
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30.24px;
+    letter-spacing: 24%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.linecontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.square{
+    height: 12px;
+    width: 12px;
+    border: 1px solid white;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+}
+.line{
+    width: 700px;
+    height: 3px;
+    background-color: #ffffff;
 }
 @keyframes fadeOut {
     from {
