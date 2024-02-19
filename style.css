@@ -425,7 +425,16 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+.aboutus>.heading{
+    padding-bottom: 18px;
+}
+.aboutcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .aboutcontent>h3{
+    display: flex;
     color: #ffffff;
     font-family: 'Outfit';
     font-weight: 500;
@@ -434,6 +443,17 @@ h2 {
     letter-spacing: 24%;
     text-align: center;
     text-transform: uppercase;
+    width: 640px;
+    padding-bottom: 16px;
+    height: 128px;
+    cursor: pointer;
+    align-items: end;
+    opacity: 1;
+}
+.aboutcontent>h3:hover{
+    width: 800px;
+    align-items: center;
+    transform: translate(9px, 9px);
 }
 .linecontainer{
     display: flex;
@@ -483,7 +503,7 @@ h2 {
     max-height: 576px;
 }
 .footer{
-    background-color: #C8C4C4;
+    background-color: transparent;
     height: 256px;
     width: 100vw;
     max-width: 100%;
@@ -597,14 +617,14 @@ h2 {
     flex: 1;
     max-width: 75%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 .cells{
     display: flex;
     flex-direction: column;
 }
-.cells p {
-    color: #000000;
+.cells{
+    color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     padding: 24px;
