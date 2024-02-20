@@ -15,6 +15,7 @@ html, body{
 #main{
     position: absolute;
     overflow: hidden;
+    perspective: 1px;
 }
 li {
     list-style: none;
@@ -104,6 +105,7 @@ nav{
     color: #ffffff;
     font-family: 'Outfit';
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .nav-link:hover{
@@ -115,7 +117,8 @@ nav{
     font-weight: 800;
     color: #ffffff;
     text-transform: uppercase;
-    font-family: 'Outfit'
+    font-family: 'Outfit';
+    cursor: pointer;
 }
 .right-element{
     display:flex;
@@ -287,7 +290,8 @@ section{
 .filler{
     height: 60vh;
 }
-.clickable1{
+.airpod-img{
+    position: relative;
     border-radius: 28px;
     padding: 20px;
     cursor: pointer; 
@@ -299,18 +303,34 @@ section{
     background-size:cover;
     width: 173px;
     height:  198px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.clickable1:hover{
+.airpod-img:hover{
     width: 216px;
     border-radius: 28px;
     background-image: url('./imgs/airpodspro.gif');
 }
-
-.clickable2{
+.yt{
+    background-image: url('./imgs/yt-red.svg');
+    z-index: 122;
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    width: 100%;
+    height: 24px;
+}
+.yt:hover{
+    background-image: url('./imgs/yt-black.svg');
+}
+.cloth-img{
     border-radius: 25px;
     padding: 20px;
     cursor: pointer; 
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 32px;
     margin-bottom: 32px;
     background-image: url('./imgs/clothing.png');
@@ -321,12 +341,12 @@ section{
     height:  198px;
     
 }
-.clickable2:hover{
+.cloth-img:hover{
     width: 216px;
     border-radius: 28px;
     background-image: url('./imgs/clothinggif.gif');
 }
-.clickable3{
+.anim-img{
     border-radius: 28px;
     padding: 20px;
     cursor: pointer; 
@@ -338,8 +358,11 @@ section{
     background-size:cover;
     width: 173px;
     height:  198px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.clickable3:hover{
+.anim-img:hover{
     width: 198px;
     height: 198px;
     border-radius: 28px;
@@ -443,15 +466,21 @@ h2 {
     letter-spacing: 24%;
     text-align: center;
     text-transform: uppercase;
-    width: 640px;
+    width: 734px;
     padding-bottom: 16px;
     height: 128px;
     cursor: pointer;
     align-items: end;
-    opacity: 1;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(18px);
+    -webkit-transform: translateY(18px);
 }
 .aboutcontent>h3:hover{
-    width: 800px;
+    width: 900px;
     align-items: center;
     transform: translate(9px, 9px);
 }

@@ -36,6 +36,23 @@ function loco(){
     smooth: true,
     scrollbarClass: 'scrollerClass'
     });
+    const slider= document.querySelector('#about');
+
+    $('#aboutlink').on('click', function() {
+        locoScroll.scrollTo(slider)
+    });
+    // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+    locoScroll.on("scroll", ScrollTrigger.update);
+    const slider1= document.querySelector('#portfolio');
+    $('#portfoliolink').on('click', function() {
+      locoScroll.scrollTo(slider1)
+    });
+
+    const slider3= document.querySelector('#main');
+
+    $('#top').on('click', function() {
+        locoScroll.scrollTo(slider3)
+    });
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
     locoScroll.on("scroll", ScrollTrigger.update);
 
