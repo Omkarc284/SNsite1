@@ -438,6 +438,51 @@ h2 {
     text-transform: uppercase;
 }
 
+@-webkit-keyframes tr {
+
+    0% {
+        opacity: 0;
+     }
+     
+     100% {
+        opacity: 1;
+        width: 900px;
+        align-items: center;
+        -webkit-transform: translate(9px, 9px);
+     }
+}
+@keyframes tr {
+
+    0% {
+        opacity: 0;
+     }
+     
+     100% {
+        opacity: 1;
+        width: 900px;
+        align-items: center;
+        transform: translate(9px, 9px);
+     }
+}
+@-webkit-keyframes tr-rev {
+
+    0% {
+        opacity: 0;
+     }
+     100% {
+        opacity: 1;
+     }
+}
+@keyframes tr-rev {
+
+    0% {
+        opacity: 0;
+     }
+     
+     100% {
+        opacity: 1;
+     }
+}
 .aboutus{
     position: relative;
     padding: 5%;
@@ -469,19 +514,23 @@ h2 {
     height: 128px;
     cursor: pointer;
     align-items: end;
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
     transform: translateY(18px);
     -webkit-transform: translateY(18px);
+    animation-duration: 1500ms;
+    -webkit-animation-duration: 1500ms;
+    animation-name: tr-rev;
+    -webkit-animation-name: tr-rev;
 }
 .aboutcontent>h3:hover{
+    animation-duration: 1500ms;
+    -webkit-animation-duration: 1500ms;
+    animation-name: tr;
+    -webkit-animation-name: tr;
     width: 900px;
     align-items: center;
     transform: translate(9px, 9px);
 }
+
 .linecontainer{
     display: flex;
     flex-direction: row;
