@@ -9,6 +9,8 @@
 // };
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
+const select = (e) => document.querySelector(e);
+const scroller = select("#main")
 
 hamburger.addEventListener("click", mobileMenu);
 
@@ -68,7 +70,29 @@ function loco(){
     pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
     });
 
+    function initShowHideHeader() {
 
+      const header = select('.navbar');
+    
+      const showHeaderAnim = gsap.from(header, { 
+        yPercent: -130,
+        paused: true,
+        duration: 0.5
+      }).progress(1);
+    
+      ScrollTrigger.create({
+        scroller: scroller,
+        start: 'top top',
+        end: 99999,
+        onUpdate: (self) => {
+          self.direction === -1 ? showHeaderAnim.play() : showHeaderAnim.reverse();
+          
+          console.log(self.direction);
+        }
+      });
+    
+    }
+    initShowHideHeader();
     // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
